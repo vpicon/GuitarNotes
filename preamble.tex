@@ -10,6 +10,7 @@
 \usepackage{afterpage}		% for putting images alone in a separate page
 %\usepackage{sectsty}		% for adjusting title fonts and sizes, such as chapters, sections...
 
+
 %% Settings
 % Change geometry of pages
 \geometry{ 
@@ -18,15 +19,24 @@
 	left=20mm,
 	top=20mm,
 }
-% change chapter title settings
+
+
+%% Change chapter, section, ... title format settings
 \usepackage{titlesec}
 
-\titleformat{\chapter}[block]
+% Chapters
+\titleformat{\chapter}[block] 
 {\normalfont\huge\bfseries}{\Large\thechapter.}{8mm}{\Large}
 \titlespacing*{\chapter}{0pt}{-19pt}{2pt}
+%Sections
+\titleformat{\section}[block]
+{\normalfont\huge\bfseries}{\large\thesection}{4mm}{\large}
+\titlespacing*{\section}{0pt}{-2pt}{2pt}
+
 
 %% Macros
 \newcommand\sheetfigsize{0.95\textwidth}
+
 
 %% New personal commands commands.
 \newcommand\ordinal[2]{$#1^{\textrm{#2}}$} 
