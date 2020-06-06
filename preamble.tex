@@ -1,13 +1,6 @@
 %% Basic and structral packages.
 \usepackage[utf8]{inputenc}
 \usepackage{geometry}       % for page geometry settings
-\geometry{
- 	a4paper,
-	total={170mm,257mm},
-	left=20mm,
- 	top=20mm,
-}
-
 \usepackage{graphicx}       % for graphics and figures treatment
 \usepackage{array}          % for advanced tabular and array settings
 \usepackage{changepage}     % for the adjustwidth environment
@@ -15,6 +8,22 @@
 \usepackage{enumitem}       % for advanced enumerate and itemize environment settings
 \usepackage{xfrac}          % for slanted fractions
 \usepackage{afterpage}		% for putting images alone in a separate page
+%\usepackage{sectsty}		% for adjusting title fonts and sizes, such as chapters, sections...
+
+%% Settings
+% Change geometry of pages
+\geometry{ 
+	a4paper,
+	total={170mm,257mm},
+	left=20mm,
+	top=20mm,
+}
+% change chapter title settings
+\usepackage{titlesec}
+
+\titleformat{\chapter}[block]
+{\normalfont\huge\bfseries}{\Large \thechapter.}{8mm}{\Large}
+\titlespacing*{\chapter}{0pt}{-19pt}{2pt}
 
 %% Macros
 \newcommand\sheetfigsize{0.95\textwidth}
