@@ -7,3 +7,6 @@ main.*
 # All other exceptions
 *.log
 *eps-converted-to.pdf
+
+# Other specific files
+figs/title_jazz_guitars-1024x782.jpg
