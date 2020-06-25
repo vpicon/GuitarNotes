@@ -45,3 +45,11 @@
 \newcommand\chord[2]{$\textrm{#1}^{\textrm{#2}}$}
 \newcommand{\halfdim}{{\tiny $\varnothing$}} % diminished chord symbol to use in \chord command
 \newcommand{\inversion}[2]{{#1}$/${#2}}
+\newcommand{\timesignature}[2]{\ensuremath{%   % Time signatures
+		\vcenter{\offinterlineskip
+			\halign{\hfil##\hfil\cr
+				$\scriptstyle#1$\cr
+				\noalign{\vskip1pt}
+				$\scriptstyle#2$\cr}
+	}}%
+}
