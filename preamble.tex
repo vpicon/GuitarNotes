@@ -10,6 +10,7 @@
 \usepackage{afterpage}		% for putting images alone in a separate page
 \usepackage{amssymb}		% for symbols, such as the emptyset symbo (\varnothing)
 \usepackage[absolute,overlay]{textpos} % Absolute text positioning
+\usepackage{float}          % for advanced figure positioning
 
 
 %% Settings
@@ -33,6 +34,10 @@
 \titleformat{\section}[block]
 {\normalfont\huge\bfseries}{\large\thesection}{4mm}{\large}
 \titlespacing*{\section}{0pt}{-2pt}{2pt}
+%Subsections
+\titleformat{\subsection}[block]
+{\normalfont\huge\bfseries}{\large\thesection}{4mm}{\large}
+\titlespacing*{\subsection}{0pt}{0pt}{2pt}
 
 
 %% Macros
@@ -40,9 +45,9 @@
 
 
 %% New personal commands commands.
-\newcommand\ordinal[2]{$#1^{\textrm{#2}}$} 
-\newcommand\strings[1]{$\left\lbrace #1 \right\rbrace$}
-\newcommand\chord[2]{$\textrm{#1}^{\textrm{#2}}$}
+\newcommand{\ordinal}[2]{$#1^{\textrm{#2}}$} 
+\newcommand{\strings}[1]{$\left\lbrace #1 \right\rbrace$}
+\newcommand{\chord}[2]{$\textrm{#1}^{\textrm{#2}}$}
 \newcommand{\halfdim}{{\tiny $\varnothing$}} % diminished chord symbol to use in \chord command
 \newcommand{\inversion}[2]{{#1}$/${#2}}
 \newcommand{\timesignature}[2]{\ensuremath{%   % Time signatures
