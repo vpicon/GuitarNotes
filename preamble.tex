@@ -5,12 +5,13 @@
 \usepackage{array}          % for advanced tabular and array settings
 \usepackage{changepage}     % for the adjustwidth environment
 \usepackage{tikz}           % for tikz packages
-\usepackage{enumitem}       % for advanced enumerate and itemize environment settings
+\usepackage{enumitem}       % for advanced enumerate and itemize options environment settings
 \usepackage{xfrac}          % for slanted fractions
 \usepackage{afterpage}		% for putting images alone in a separate page
 \usepackage{amssymb}		% for symbols, such as the emptyset symbo (\varnothing)
 \usepackage[absolute,overlay]{textpos} % Absolute text positioning
 \usepackage{float}          % for advanced figure positioning
+\usepackage{pdfpages}       % for including pdf files in tex document
 
 
 %% Settings
@@ -58,3 +59,19 @@
 				$\scriptstyle#2$\cr}
 	}}%
 }
+
+% New command to include nicely musicsheets as full expanded pdf files.
+\newlength{\originalVOffset}
+\newlength{\originalHOffset}
+\setlength{\originalVOffset}{\voffset}   
+\setlength{\originalHOffset}{\hoffset}
+
+\newcommand{\includemusicsheet}[1]{
+	\setlength{\voffset}{0cm}
+	\setlength{\hoffset}{0cm}
+	\includepdf[pages=-]{#1}
+	\setlength{\voffset}{\originalVOffset}
+	\setlength{\hoffset}{\originalHOffset}
+}
+
+
