@@ -1,7 +1,7 @@
 %% Basic and structral packages.
 \usepackage[utf8]{inputenc}
 \usepackage{geometry}       % for page geometry settings
-\usepackage{graphicx}       % for graphics and figures treatment
+\usepackage{graphicx, subfig}       % for graphics and figures treatment
 \usepackage{array}          % for advanced tabular and array settings
 \usepackage{changepage}     % for the adjustwidth environment
 \usepackage{tikz}           % for tikz packages
@@ -43,6 +43,8 @@
 
 %% Macros
 \newcommand\sheetfigsize{0.95\textwidth}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}  % for width specified centered columns in tables
+
 
 
 %% New personal commands commands.
@@ -73,5 +75,6 @@
 	\setlength{\voffset}{\originalVOffset}
 	\setlength{\hoffset}{\originalHOffset}
 }
+
 
 
